@@ -1,7 +1,6 @@
 /****************************************************
  * Author: David Sasser
  * Purpose: To complete Problem Four of Project Euler
- * Note: Add -lm to compiling lines. Adds link to math libs
  * Date: August 30, 2017
  ****************************************************/
 
