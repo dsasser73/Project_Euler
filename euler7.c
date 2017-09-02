@@ -1,28 +1,27 @@
 /****************************************************
  * Author: David Sasser
- * Purpose: To complete Problem Three of Project Euler
+ * Purpose: To complete Problem Seven of Project Euler
  * Note: Add -lm to compiling lines. Adds link to math libs
- * Date: August 30, 2017
+ * Date: September 1, 2017
  ****************************************************/
 
 #include <stdio.h>
 #include <math.h>
-#include <stdbool.h>
-const long MAX_NUM = 600851475143;
+const MAX_NUM = 10001;
 int main()
 {
-	long ans = 0;
-	long i;
-	for(i=sqrt(MAX_NUM); i>0; i--)
+	int sum = 1;
+	int i = 3;
+	while(sum!=MAX_NUM)
 	{
-		int res = isPrime(i);
-		if(MAX_NUM%i == 0 && res)
+		if(isPrime(i))
 		{
-			ans = i;
-			break;
+			sum += 1;
 		}
+		i+=2;
 	}
-	printf("%d\n", ans);
+	i=i-2;
+	printf("%d\n", i);
 
 	return 0;
 }
